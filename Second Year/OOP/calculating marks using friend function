@@ -1,0 +1,72 @@
+#include <iostream>
+
+class TEE;
+
+class ICA
+{
+    float mathmarks;
+    float oopmarks;
+    float semarks;
+    float dsmarks;
+    public:
+    
+    void inputmarks()
+    {
+        std::cout << "ICA marks for Maths are = ";
+        std::cin >> mathmarks;
+        std::cout << "ICA marks for OOP are = ";
+        std::cin >> oopmarks;
+        std::cout << "ICA marks for SE are = ";
+        std::cin >> semarks;
+        std::cout << "ICA marks for DS are = ";
+        std::cin >> dsmarks;
+    }
+    
+   friend int calculateresult(ICA, TEE);
+};
+
+class TEE
+{
+    float mathmarks;
+    float oopmarks;
+    float semarks;
+    float dsmarks;
+    public:
+    
+    void inputmarks()
+    {
+        std::cout << "\nTEE marks for Maths are = ";
+        std::cin >> mathmarks;
+        std::cout << "TEE marks for OOP are = ";
+        std::cin >> oopmarks;
+        std::cout << "TEE marks for SE are = ";
+        std::cin >> semarks;
+        std::cout << "TEE marks for DS are = ";
+        std::cin >> dsmarks;
+    }
+    friend int calculateresult(ICA, TEE);
+};
+
+int calculateresult(ICA a, TEE b)
+{
+    std::cout << "\nTotal Marks out of 100 subject wise-";
+    std::cout << "\nMaths: " << a.mathmarks+b.mathmarks;
+    std::cout << "\nOOP: " << a.oopmarks+b.oopmarks;
+    std::cout << "\nSE: " << a.semarks+b.semarks;
+    std::cout << "\nSE: " << a.dsmarks+b.dsmarks;
+    float finalresult = (a.mathmarks+b.mathmarks+a.oopmarks+b.oopmarks+a.semarks+b.semarks+a.dsmarks+b.dsmarks)/5;
+    std::cout << "\nFinal Result: " << finalresult << "%";
+    return 0;
+}
+
+int main()
+{
+    std::cout << "Hello World\n";
+    
+    ICA a;
+    TEE b;
+    a.inputmarks();
+    b.inputmarks();
+    calculateresult(a, b);
+}
+
