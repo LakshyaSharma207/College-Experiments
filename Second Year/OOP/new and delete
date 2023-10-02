@@ -1,0 +1,43 @@
+#include <iostream>
+
+void display(char name[], int rollno, int dob, int marks, char divi[] = "B2", char prog[] = "CSBS")
+{
+   std::cout << "\n\n Name: " << name << "\n Roll No.: " << rollno << "\n Date of Birth: " << dob << "\n Marks: " << marks << "\n Division: " << divi << "\n Program: " << prog;
+}
+
+inline void sinput()
+{
+    char name[20];
+    std::cout << "\nEnqter Name of the student = ";
+    std::cin >> name;
+    
+    int *rollno = new int;
+    std::cout << "Enter Roll no. of the student = ";
+    std::cin >> *rollno;
+    
+    int *dob = new int;
+    std::cout << "Enter Date of birth of the student = ";
+    std::cin >> *dob;
+    
+    int *marks = new int;
+    std::cout << "Enter Marks of the student = ";
+    std::cin >> *marks;
+    
+    display(name,*rollno,*dob,*marks);
+    
+    delete rollno;
+    delete dob;
+    delete marks;
+}
+
+int main()
+{
+    std::cout << "Enter details for student 1-";
+    sinput();
+    
+    std::cout << "\nEnter details for student 2-";
+    sinput();
+    
+    std::cout << "\nEnter details for student 3-";
+    sinput();
+}
