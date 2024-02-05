@@ -36,6 +36,7 @@ int main()
     // for(i = fron; i < 5; i++) {
     //     printf("%d, ", visited[i]);
     // }
+    printf("\n");
 }
 
 int enqueue(int index) {

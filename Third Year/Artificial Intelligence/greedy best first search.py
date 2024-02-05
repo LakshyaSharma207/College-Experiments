@@ -16,7 +16,7 @@ for row in graph:
     print(row)
 
 priorQueue = [(heuristic[0], 0, ["A"])]
-visited = [0, 0, 0, 0, 0, 0]
+visited = [0] * n
 
 while priorQueue != []:
     priorQueue.sort()
