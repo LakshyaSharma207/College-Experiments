@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift-Commerce</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        a{
+            color: aliceblue;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            cursor: pointer;
+            color: #555;
+        }
+        h3:hover{
+            color: #302f2f;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Swift-Commerce!!</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./register.html">Registration</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Featured Products</h2>
+            <h3>In Laptops</h3>
+            <table>
+                <tr>
+                    <td rowspan="2"><img src="./images/2-4-scaled-e1585829292540.jpg" alt="Product 1"></td>
+                </tr>
+                <tr>
+                    <td>Asus Rog Gaming PC - $1200 <br><button>Add to Cart</button></td>
+                </tr>
+            </table>
+            <h3>In Fitness</h3>
+            <table>
+                <tr>
+                    <td rowspan="2"><img src="./images/design-professional-product-label-of-your-product.jpg" alt="Product 1"></td>
+                </tr>
+                <tr>
+                    <td>Fitness Combo (Protein Blueberry Flavor) - $200 <br><button>Add to Cart</button></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Special Offers</h2>
+            <h3>In Cosmetics</h3>
+            <table>
+                <tr>
+                    <td rowspan="2"><img src="./images/d248064c-634a-4887-8538-a78157bb99a0_1.0b1f0e77bfdb16e57c23bb60a9c38478.jpeg" alt="Product 1"></td>
+                </tr>
+                <tr>
+                    <td>Head and Shoulders Shampoo - <del>$5</del> <ins>$2</ins> <br><button>Add to Cart</button></td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Our Mission</h2>
+            <p>We are dedicated to serving our customers with the best products and ensuring a seamless shopping experience.</p>
+            
+            <h3>Watch Our Promotional Video</h3>
+            <video controls width="1000px">
+                <source src="our_mission_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <h3>Listen to Our Mission Statement</h3>
+            <audio controls>
+                <source src="our_mission_audio.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        </section>
+    </main>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 Swift-Commerce. All rights reserved.</p>
+    </footer>
+</body>
+</html>

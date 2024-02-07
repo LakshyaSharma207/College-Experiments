@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<style>
+    button{
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+        border-width: 1px;
+        border-style: solid;
+        margin: 10px;
+        padding-inline: 20px;
+        margin-inline: 43%;
+        width: max-content;
+    }
+    .formContainer{
+        background-color: rgb(11, 176, 11);
+        width: 50%;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+    .inputField{
+        background-color: rgb(145, 217, 38);
+        padding: 10px;
+        display: flex;
+        width: 90%;
+        gap: 120px;
+        border-color: white;
+        border-style: solid;
+        border-radius: 10px;
+    }
+    input{
+        width: 200px;
+    }
+    p{
+        padding-top: 5px;
+        padding-left: 25px;
+    }
+    .card-content {
+        display: flex;
+        align-items: center; 
+        justify-content: start;
+        gap: 100px;
+    }
+    .card-content img {
+        height: 1.1em; 
+        width: auto;
+    }
+</style>
+<body>
+    <form class="formContainer">
+        <p>Step 1: Your Details</p>
+        <div class="block">
+            <div class="inputField">Name <input type="text"  placeholder="Please enter your name"></div>
+            <div class="inputField">Email <input type="email"  placeholder="example@domain.com"></div>
+            <div class="inputField">Phone <input type="text"  placeholder="Eg. +91XXXXXXXXXX"></div>
+        </div>
+        <p>Step 2: Delivery Address</p>
+        <div class="block">
+            <div class="inputField">Address <Textarea cols="25" rows="6"></Textarea></div>
+            <div class="inputField">Post Code <input type="text"></div>
+            <div class="inputField">Country <input type="text"></div>
+        </div>
+        <p>Step 3: Card Details</p>
+        <div class="block">
+            <div class="inputField" style="flex-direction: column; gap: 15px;">Card Type 
+                <div class="card-content">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px">
+                        <input type="radio" name="paymentMethods" value="VISA" id="VISA" style="width: 10px;">
+                        <label for="VISA"><img src="./images/Untitled.png" alt=""></label>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px">
+                        <input type="radio" name="paymentMethods" value="mastercard" id="mastercard" style="width: 10px;">
+                        <label for="mastercard"><img src="./images/mastercard.png" alt=""></label>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px">
+                        <input type="radio" name="paymentMethods" value="rupay" id="rupay" style="width: 10px;">
+                        <label for="rupay"><img src="./images/rupay.png" alt=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="inputField">Card Number <input type="text"></div>
+            <div class="inputField">Name on Card <input type="text" placeholder="enter name as on card"></div>
+        </div>
+        <button type="reset"> BUY IT! </button>
+    </form>
+</body>
+</html>
