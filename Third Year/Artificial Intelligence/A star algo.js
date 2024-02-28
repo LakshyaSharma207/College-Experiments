@@ -19,16 +19,16 @@ const cost = [[0, 3, 2, 0, 0, 4, 0],
 const heuristic = [7, 6, 5, 4, 3, 2, 0];
 
 let priorQueue = [{'cost': 0, 'node': 0, 'path': ['A']}];  // (cost, node, path)
-let visited = [0] * 7;
+let visited = [0, 0, 0, 0, 0, 0, 0];
 
-while(priorQueue != []){
+while(priorQueue.length !== 0){
     priorQueue.sort((a, b) => a.cost - b.cost);
     let {cost: currentCost, node: currentNode, path: currentPath} = priorQueue.shift(); // pop() returns last value of []
     visited[currentNode] = 1;
 
     if (currentNode == 4){
         console.log(`Path: ${currentPath}`);
-        console.log(`Cumulative Cost: ${currentCost}`);
+        console.log(`Final Cost: ${currentCost}`);
         break;
     } else{
         let i;
